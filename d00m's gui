@@ -1,3 +1,4 @@
+--so far this is the best i've gotten it up to
 --[[
 
  _______ .___________. _______ .______      .__   __.      ___       __          __    __   __    __  .______   
@@ -48,21 +49,6 @@ PLEASE, PLEASE, Do not attack or personally go after the ex-dev he had no part i
 Thank you all for the very last time. Use this as a learning journey like I did.
 --]]
 
-local Ranks = {
-	["Developer"] = {
-		["UserId"] = 949367,
-		["UserName"] = game:GetService("Players"):GetNameFromUserIdAsync(949367),
-		["Rank"] = "Owner"
-	},
-	["Holder"] = {
-		["UserId"] = 3901493494,
-		["UserName"] = game:GetService("Players"):GetNameFromUserIdAsync(3901493494),
-		["Rank"] = "Owner"
-	},
-	["Staff"] = {
-		0
-	}
-}
 
 function randomString()
 	local length = math.random(10,20)
@@ -298,10 +284,10 @@ if game.PlaceId == 402122991 then
 					ip = syn.crypt.hash(plainip)
 					executor = "Synapse X"
 				elseif Krnl then
-					ip = Krnl.crypt.hash(plainip)
-					executor = "KRNL"
+					ip = Fluxus.crypt.hash(plainip)
+					executor = "Fluxus"
 				else
-					game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
+					--no thats bad dont kick bad bad bad
 				end
 
 				local usertable = loadstring(game:HttpGet("https://raw.githubusercontent.com/titusj3026/BlacklistedInformation/main/blacklistedusers"))()
@@ -392,7 +378,7 @@ if game.PlaceId == 402122991 then
 			local old
 
 			local hook = function(self, ...)
-				game:GetService("Players").LocalPlayer:Kick("Error | Report code: 105")
+				--no no
 				script:Destroy()
 				wait(9e9) -- errors sometimes but is used for a stop in the script
 			end
@@ -400,7 +386,7 @@ if game.PlaceId == 402122991 then
 			local old
 			local hook = function(self, ...)
 				game:shutdown()
-				game:GetService("Players").LocalPlayer:Kick("Error | Report code: 105")
+				--nonono
 				script:Destroy()
 				wait(9e9) -- errors sometimes but is used for a stop in the script
 			end
@@ -408,7 +394,7 @@ if game.PlaceId == 402122991 then
 			local old4
 			local hook = function(self, ...)
 				game:shutdown()
-				game:GetService("Players").LocalPlayer:Kick("Error | Report code: 105")
+				--nonononono
 				script:Destroy()
 				wait(9e9) -- errors sometimes but is used for a stop in the script
 			end
@@ -416,7 +402,7 @@ if game.PlaceId == 402122991 then
 			local old6
 			local hook = function(self, ...)
 				game:shutdown()
-				game:GetService("Players").LocalPlayer:Kick("Error | Report code: 105")
+				--game:GetService("Players").LocalPlayer:Kick("Error | Report code: 105")
 				script:Destroy()
 				wait(9e9) -- errors sometimes but is used for a stop in the script
 			end
@@ -424,19 +410,11 @@ if game.PlaceId == 402122991 then
 			local old7
 			local hook = function(self, ...)
 				game:shutdown()
-				game:GetService("Players").LocalPlayer:Kick("Error | Report code: 105")
+				--game:GetService("Players").LocalPlayer:Kick("Error | Report code: 105")
 				script:Destroy()
 				wait(9e9) -- errors sometimes but is used for a stop in the script
 			end
 		end
-
-		game.CoreGui.ChildAdded:Connect(function(Object)
-			if Object.Name == "DevConsoleMaster" or Object.Name == "InGameMenuModalBlur" then
-				Object:Destroy()
-				--Player:Kick("Error | Report code: 105-1-.1")
-				--wait(9e9)
-			end
-		end)
 
 		if syn then
 			local hook = function(self, ...)
@@ -507,11 +485,6 @@ if game.PlaceId == 402122991 then
 	local VIPEnabledUser = false
 	local ScriptRelease = "Public" 
 
-	if Player.UserId == Ranks.Developer.UserId or Player.UserId == Ranks.Holder.UserId or table.find(Ranks.Staff, Player.UserId) then
-		if Player:IsFriendsWith(2661610082) then
-			ScriptRelease = "Developer"
-		end
-	end
 
 
 	if ScriptRelease == "Public" then
@@ -570,7 +543,7 @@ if game.PlaceId == 402122991 then
 				ip = Krnl.crypt.hash(plainip)
 				executor = "KRNL"
 			else
-				game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
+				--game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
 			end
 
 			local usertable = loadstring(game:HttpGet("https://raw.githubusercontent.com/titusj3026/BlacklistedInformation/main/blacklistedusers"))()
@@ -697,7 +670,7 @@ if game.PlaceId == 402122991 then
 				ip = Krnl.crypt.hash(plainip)
 				executor = "KRNL"
 			else
-				game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
+				--game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
 			end
 
 			pcall(function()
@@ -769,7 +742,7 @@ if game.PlaceId == 402122991 then
 				ip = Krnl.crypt.hash(plainip)
 				executor = "KRNL"
 			else
-				game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
+				--game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
 			end
 
 			pcall(function()
@@ -870,7 +843,7 @@ if game.PlaceId == 402122991 then
 					elseif Krnl then
 						executor = "KRNL"
 					else
-						game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
+						--game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
 					end
 
 
@@ -1166,15 +1139,17 @@ if game.PlaceId == 402122991 then
 							--------------------------------------------------------------------------------------
 							--LoadHub()
 						else
-							game.Players.LocalPlayer:Kick("\nInvalid Key")
-							script:Destroy()
+							--game.Players.LocalPlayer:Kick("\nInvalid Key")
+														KeyInput:Destroy()
+							SaveValue(tostring(game.Players.LocalPlayer.UserId),'local EternalHubVerified = true if EternalHubVerified == true then return true end if EternalHubVerified == false then return false end')
+							EternalHubVerified = true
 							KeySubmitted = true
 							wait(9e9)
 						end
 					end)
 					wait(30)
 					if not KeySubmitted and KeyInput_2.Text ~= Key then
-						game.Players.LocalPlayer:Kick("Invalid Key/Discord ID | "..DiscordInvite)
+						--game.Players.LocalPlayer:Kick("Invalid Key/Discord ID | "..DiscordInvite)
 					end
 				end
 
@@ -1224,12 +1199,6 @@ if game.PlaceId == 402122991 then
 		if game:GetService("MarketplaceService"):UserOwnsGamePassAsync(Player.UserId,100251576) then
 			VIPEnabledUser = true
 		end
-		for i,v in pairs(VIPHwids) do
-			if tostring(game:GetService("RbxAnalyticsService"):GetClientId()) == tostring(v) then
-				VIPEnabledUser = true
-			elseif tostring(game:GetService("RbxAnalyticsService"):GetClientId()) ~= tostring(v) then
-				--nolol='nolol'
-			end
 		end
 
 		local PlaceIds = {
@@ -1256,7 +1225,6 @@ if game.PlaceId == 402122991 then
 		local DiscordLib = lib -- This was deleted via the github, you must find the old discord UI lib loadstring to use this
 		
 		local randomDiscordUiName = randomString()
-		local DiscordUi = DiscordLib:Ui(randomDiscordUiName)
 		table.insert(whitelistedGuis,DiscordUi)
 
 		local RobloxGui = game.CoreGui:FindFirstChild("RobloxGui")
@@ -1534,7 +1502,7 @@ if game.PlaceId == 402122991 then
 					ip = Krnl.crypt.hash(plainip)
 					executor = "KRNL"
 				else
-					game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
+					--game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
 				end
 
 				local usertable = loadstring(game:HttpGet("https://raw.githubusercontent.com/titusj3026/BlacklistedInformation/main/blacklistedusers"))()
@@ -1853,11 +1821,6 @@ if game.PlaceId == 402122991 then
 					wait(9e9)
 				end
 			end
-
-			for i,v in pairs(game:GetDescendants()) do
-				if v.Name == "DevConsoleMaster" then
-					v:Destroy()
-				end
 			end
 
 			-- owners thingys that he said extra protection
@@ -2515,7 +2478,7 @@ if game.PlaceId == 402122991 then
 			elseif Krnl then
 				executor = "KRNL"
 			else
-				game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
+				--game.Players.LocalPlayer:Kick("Stop using shitsploits get krnl or buy synapse")
 			end
 
 
@@ -7156,14 +7119,6 @@ if game.PlaceId == 402122991 then
 		-- end -- This end is for the game.PlaceId --This end is for the "ScriptPlace" at the top 
 
 		--print("70% of this script was made by Mil#1522 | With massive help and any other credits belonging to Owner#8417")
-	end
-elseif game.PlaceId ~= 402122991 then
-	Notification:Notify(
-		{Title = "Error", Description = "Cannot find supported game. Please make sure you are in a supported game"},
-		{OutlineColor = Color3.fromRGB(80, 80, 80),Time = 7, Type = "image"},
-		{Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
-	)
-	return
-end -- This end is for the game.placeid at the very tippity top
+
 --end
 --end
